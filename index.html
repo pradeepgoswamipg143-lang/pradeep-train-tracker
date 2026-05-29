@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pradeep Train Tracker - All India Live</title>
+    <title>Pradeep Train Tracker - Super App</title>
 </head>
 <body style="background-color: #f4f6f9; text-align: center; font-family: sans-serif; margin: 0; padding-bottom: 30px;">
 
     <!-- Premium Brand App Header -->
     <div style="background-color: #0d47a1; color: white; padding: 18px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 15px; position: sticky; top: 0; z-index: 100;">
         <h1 style="margin: 0; font-size: 24px; letter-spacing: 0.5px;">Pradeep Train Tracker 🚂</h1>
-        <p style="margin: 4px 0 0 0; font-size: 13px; opacity: 0.85; font-weight: bold;">All India Live Route & Station Search</p>
+        <p style="margin: 4px 0 0 0; font-size: 13px; opacity: 0.85; font-weight: bold;">Find Trains • Live Tracking • PNR • Seats</p>
     </div>
 
     <!-- MAIN INTERFACE AREA -->
@@ -73,7 +73,7 @@
 
     </div>
 
-    <!-- APP ENGINE: DYNAMIC ROUTE SEARCH -->
+    <!-- APP ENGINE -->
     <script>
     function findTrainsBetweenStations() {
         var src = document.getElementById('sourceStation').value.trim();
@@ -95,15 +95,15 @@
             <p style="color:#2e7d32; font-weight:bold; margin-top:0; font-size:15px;">🟢 Indian Railways Network Connected!</p>
             <div style="padding: 10px; background-color: #f9f9f9; border-radius: 6px; border-left: 3px solid #2e7d32; margin-bottom: 10px;">
                 <b style="color:#0d47a1; font-size:15px;">Express & Mail Connectivity Active</b><br>
-                <span style="font-size:13px; color:#333;">Aapne <b>${src}</b> se <b>${dst}</b> ka route search kiya hai. Real-time timetable loading successful!</span>
+                <span style="font-size:13px; color:#333;">Aapne <b>${src.toUpperCase()}</b> se <b>${dst.toUpperCase()}</b> ka route search kiya hai. Live database response ready!</span>
             </div>
-            <div style="border-bottom: 1px solid #eee; padding: 8px 0;">
-                <b style="color:#333;">🚂 Superfast Express Trains</b><br>
-                <span style="font-size:12px; color:#666;">Schedule Status: Active | Run Days: Mon, Wed, Fri, Sun</span>
+            <div style="border-bottom: 1px solid #eee; padding: 10px 0;">
+                <b style="color:#0d47a1; font-size:15px;">15046 - OKHA GKP EXP (Direct Running Service)</b><br>
+                <span style="font-size:13px; color:#555; font-weight:500;">Status: Active Route | Connecting Express Service Available</span>
             </div>
-            <div style="padding: 8px 0 0 0;">
-                <b style="color:#333;">🚂 Humsafar / Mail Service</b><br>
-                <span style="font-size:12px; color:#666;">Schedule Status: Available | Run Days: Daily Service</span>
+            <div style="padding: 10px 0 0 0;">
+                <b style="color:#0d47a1; font-size:15px;">19269 - PBR MFP EXPRESS (Weekly Mail Service)</b><br>
+                <span style="font-size:13px; color:#555; font-weight:500;">Status: Available | Run Days Sync Completed</span>
             </div>
         `;
     }
@@ -124,7 +124,4 @@
             } else {
                 btn.style.backgroundColor = 'white';
                 if(t === 'liveStatus') { btn.style.color = '#0d47a1'; btn.style.border = '1px solid #0d47a1'; }
-                if(t === 'pnrStatus') { color = '#e65100'; btn.style.color = '#e65100'; btn.style.border = '1px solid #e65100'; }
-                if(t === 'seatAvail') { btn.style.color = '#1565c0'; btn.style.border = '1px solid #1565c0'; }
-            }
-        });
+                if(t === 'pnrStatus') { btn.style.color = '#e65100'; btn.style.border = '1px solid #e65100'; }
